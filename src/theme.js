@@ -31,15 +31,12 @@ const theme = {
     },
     h1: {
       fontSize: '26px',
-      fontWeight: fontWeight.bold,
     },
     h2: {
       fontSize: '22px',
-      fontWeight: fontWeight.bold,
     },
     h3: {
       fontSize: '18px',
-      fontWeight: fontWeight.bold,
     },
     body1: {
       fontSize: '16px',
