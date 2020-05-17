@@ -6,14 +6,26 @@ export default {
   component: Text,
 };
 
-export const Default = () => (
-  <div>
-    <Text variant="h1">Heading 1 </Text>
-    <Text variant="h2">Heading 2</Text>
-    <Text variant="h3">Heading 3</Text>
-    <Text> Body 1 (Default) </Text>
-    <Text variant="body2">Body 2</Text>
-    <Text variant="subtitle1">Subtitle</Text>
-    <Text color="highlighted"> Highlighted Text</Text>
-  </div>
+export const Variants = () => (
+  <>
+    <Text variant="h1" spaceAfter="small">
+      Heading 1
+    </Text>
+    <Text variant="h2" spaceAfter="small">
+      Heading 2
+    </Text>
+    <Text variant="h3" spaceAfter="small">
+      Heading 3
+    </Text>
+    <Text spaceAfter="small"> Body 1 (Default) </Text>
+    <Text variant="body2" spaceAfter="small">
+      Body 2
+    </Text>
+    <Text variant="subtitle1" spaceAfter="small">
+      Subtitle 1
+    </Text>
+    <Text color="highlighted" spaceAfter="small">
+      Highlighted Text
+    </Text>
+  </>
 );
