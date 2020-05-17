@@ -6,7 +6,9 @@ import GlobalStyle from '../src/globalStyle';
 
 addDecorator(story => (
   <ThemeProvider theme={theme}>
+    <div style={{padding: theme.spacing.xl}}>
     <GlobalStyle />
     {story()}
+    </div>
   </ThemeProvider>
 ));
