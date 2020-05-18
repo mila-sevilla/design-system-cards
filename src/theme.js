@@ -60,6 +60,7 @@ const theme = {
   shape: {
     borderRadius: '4px',
     borderRadiusLarge: '12px',
+    circle: '50%',
   },
 };
 

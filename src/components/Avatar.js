@@ -13,7 +13,7 @@ const getSizeToken = ({ theme, size }) => {
 const StyledAvatar = styled.div(
   ({ theme }) => css`
     background-color: ${theme.palette.grey200};
-    border-radius: 50%;
+    border-radius: ${theme.shape.circle};
     height: ${getSizeToken};
     width: ${getSizeToken};
     overflow: hidden;
