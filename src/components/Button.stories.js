@@ -7,4 +7,9 @@ export default {
   component: Button,
 };
 
-export const Primary = () => <Button>Button</Button>;
+export const Primary = () => (
+  <>
+    <Button>Button</Button>
+    <Button disabled>Disabled Button</Button>
+  </>
+);

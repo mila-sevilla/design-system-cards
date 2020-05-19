@@ -7,17 +7,19 @@ const StyledButton = styled.button(
     font-family: ${theme.typography.fontFamily};
     padding: ${`${theme.spacing.xs} ${theme.spacing.sm}`};
     color: ${theme.palette.grey50};
-    background-color: ${theme.palette.primary};
-    border: ${`1px solid ${theme.palette.primary}`};
+    background-color: ${props => (props.disabled ? theme.palette.grey200 : theme.palette.primary)};
+    border: ${props => !props.disabled && `1px solid ${theme.palette.primary}`};
     border-radius: ${theme.shape.borderRadius};
     transition: box-shadow 0.3s ease, background 0.8s;
     &:focus {
       outline: none;
     }
     &:hover {
-      cursor: pointer;
-      box-shadow: ${theme.shadows.medium};
-      background: ${`${theme.palette.primary} radial-gradient(circle, transparent 1%, ${theme.palette.primary} 1%) center/15000%`};
+      cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+      box-shadow: ${props => !props.disabled && theme.shadows.medium};
+      background: ${props =>
+        !props.disabled &&
+        `${theme.palette.primary} radial-gradient(circle, transparent 1%, ${theme.palette.primary} 1%) center/15000%`};
     }
     &:active {
       background-color: ${theme.palette.primaryLight};
@@ -27,6 +29,6 @@ const StyledButton = styled.button(
   `
 );
 
-export default function Button({ children }) {
-  return <StyledButton>{children}</StyledButton>;
+export default function Button({ children, disabled = false }) {
+  return <StyledButton disabled={disabled}>{children}</StyledButton>;
 }
