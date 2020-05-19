@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import getSpacingToken from './common/getSpacingToken';
+import spaceDict from './common/spaceDict';
 
 const getColorToken = ({ theme, color }) => {
   const colorToken = {
@@ -35,12 +35,21 @@ const getVariantToken = ({ theme, variant }) => {
   return variantToken[variant];
 };
 
+const getSpaceAfterToken = ({ theme, spaceAfter }) => {
+  return spaceAfter && spaceDict(theme)[spaceAfter];
+};
+
+const getSpaceBeforeToken = ({ theme, spaceBefore }) => {
+  return spaceBefore && spaceDict(theme)[spaceBefore];
+};
+
 export const StyledText = styled(({ element: TextElement, children, className }) => (
   <TextElement className={className}>{children}</TextElement>
 ))`
   font-family: ${({ theme }) => theme.typography.fontFamily};
-  margin: 0;
-  margin-bottom: ${getSpacingToken};
+  letter-spacing: 0.3px;
+  margin-top: ${getSpaceBeforeToken};
+  margin-bottom: ${getSpaceAfterToken};
   color: ${getColorToken};
   font-weight: ${getWeightToken};
   font-size: ${getVariantToken};
@@ -51,7 +60,8 @@ const Text = ({
   element = 'p',
   variant = 'body1',
   color = 'default',
-  spaceAfter = '0',
+  spaceAfter = 'none',
+  spaceBefore = 'none',
   align,
   children,
 }) => {
@@ -60,6 +70,7 @@ const Text = ({
       element={element}
       variant={variant}
       spaceAfter={spaceAfter}
+      spaceBefore={spaceBefore}
       color={color}
       align={align}
     >

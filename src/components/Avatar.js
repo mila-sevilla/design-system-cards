@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const getSizeToken = ({ theme, size }) => {
+const getSizeToken = ({ size }) => {
   const sizeToken = {
     large: '64px',
     medium: '56px',
@@ -24,12 +24,8 @@ const StyledAvatar = styled.div(
   `
 );
 
-const Avatar = ({ src, size }) => {
-  return (
-    <StyledAvatar size={size}>
-      <img src={src} alt="avatar" />
-    </StyledAvatar>
-  );
+const Avatar = ({ src, size = 'medium' }) => {
+  return <StyledAvatar size={size}>{src && <img src={src} alt="avatar" />}</StyledAvatar>;
 };
 
 export default Avatar;

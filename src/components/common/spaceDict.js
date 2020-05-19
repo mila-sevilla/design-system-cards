@@ -1,4 +1,4 @@
-const getSpacingToken = ({ theme, spaceAfter }) => {
+const spaceDict = theme => {
   const spaceTokens = {
     none: '0',
     tiny: theme.spacing.xxs,
@@ -9,7 +9,7 @@ const getSpacingToken = ({ theme, spaceAfter }) => {
     extraLarge: theme.spacing.xl,
     largest: theme.spacing.xxl,
   };
-  return spaceAfter && spaceTokens[spaceAfter];
+  return spaceTokens;
 };
 
-export default getSpacingToken;
+export default spaceDict;
