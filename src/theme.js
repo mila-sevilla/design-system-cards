@@ -21,7 +21,7 @@ const theme = {
   shadows: {
     small: '0px 2px 4px rgba(153, 153, 153, 0.55)',
     medium: '0px 3px 6px rgba(153, 153, 153, 0.55)',
-    large: '0px 6px 10px rgba(153, 153, 153, 0.55)',
+    large: '0px 5px 8px rgba(153, 153, 153, 0.55)',
   },
   typography: {
     fontFamily: "'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif",
