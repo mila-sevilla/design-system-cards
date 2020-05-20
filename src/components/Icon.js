@@ -15,7 +15,7 @@ const getColorToken = ({ theme, color }) => {
   const colorToken = {
     inherit: 'currentColor',
     dark: theme.palette.grey600,
-    light: theme.palette.grey50,
+    light: theme.palette.grey400,
     primary: theme.palette.primary,
   };
   return colorToken[color];
