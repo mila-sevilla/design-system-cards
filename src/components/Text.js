@@ -35,13 +35,10 @@ const getVariantToken = ({ theme, variant }) => {
   return variantToken[variant];
 };
 
-const getSpaceAfterToken = ({ theme, spaceAfter }) => {
-  return spaceAfter && spaceDict(theme)[spaceAfter];
-};
+const getSpaceAfterToken = ({ theme, spaceAfter }) => spaceAfter && spaceDict(theme)[spaceAfter];
 
-const getSpaceBeforeToken = ({ theme, spaceBefore }) => {
-  return spaceBefore && spaceDict(theme)[spaceBefore];
-};
+const getSpaceBeforeToken = ({ theme, spaceBefore }) =>
+  spaceBefore && spaceDict(theme)[spaceBefore];
 
 export const StyledText = styled(({ element: TextElement, children, className }) => (
   <TextElement className={className}>{children}</TextElement>

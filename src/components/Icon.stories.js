@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
 import Text from './Text';
+import Stack from './Stack';
 
 export default {
   title: 'Icons',
@@ -8,12 +9,24 @@ export default {
 };
 
 export const All = () => (
-  <>
-    <Icon icon="mail" color="dark" size="large" />
-    <Text>Mail</Text>
-    <Icon icon="clock" color="dark" size="large" />
-    <Text>Clock</Text>
-    <Icon icon="star" color="dark" size="large" />
-    <Text>Star</Text>
-  </>
+  <Stack spacingChildren="medium">
+    <Stack direction="column" align="center">
+      <Icon icon="mail" color="dark" size="medium" />
+      <Text variant="body2" spaceBefore="small">
+        Mail
+      </Text>
+    </Stack>
+    <Stack direction="column" align="center">
+      <Icon icon="clock" color="dark" size="medium" />
+      <Text variant="body2" spaceBefore="small">
+        Clock
+      </Text>
+    </Stack>
+    <Stack direction="column" align="center">
+      <Icon icon="star" color="dark" size="medium" />
+      <Text variant="body2" spaceBefore="small">
+        Star
+      </Text>
+    </Stack>
+  </Stack>
 );

@@ -12,12 +12,10 @@ const StyledBadge = styled.div(
   `
 );
 
-const Badge = ({ children }) => {
-  return (
-    <StyledBadge>
-      <span>{children}</span>
-    </StyledBadge>
-  );
-};
+const Badge = ({ children }) => (
+  <StyledBadge>
+    <span>{children}</span>
+  </StyledBadge>
+);
 
 export default Badge;

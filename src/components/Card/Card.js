@@ -2,9 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import spaceDict from '../common/spaceDict';
 
-const getPaddingToken = ({ theme, padding }) => {
-  return padding && spaceDict(theme)[padding];
-};
+const getPaddingToken = ({ theme, padding }) => padding && spaceDict(theme)[padding];
 
 const StyledCard = styled.div(
   ({ theme }) => css`
