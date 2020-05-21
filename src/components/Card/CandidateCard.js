@@ -9,15 +9,21 @@ import CardFooter from './CardFooter';
 
 export default function CandidateCard() {
   return (
-    <Card maxWidth="540px">
+    <Card>
       <CardHeader />
-      <Stack flex padding="medium" spacingChildren="medium">
+      <Stack
+        padding="medium"
+        spacingChildren="medium"
+        direction="column"
+        desktop={{ direction: 'column' }}
+        tablet={{ direction: 'row' }}
+      >
         <Avatar size="small" />
-        <Stack flex direction="column" spacingChildren="small">
+        <Stack direction="column" spacingChildren="small">
           <Text variant="h3" color="highlighted">
             Ennie Deininger
           </Text>
-          <Stack flex direction="column">
+          <Stack direction="column">
             <Text variant="body2" spaceAfter="tiny">
               Business Manager for Poland, Czech Republic and Slovakia
             </Text>
@@ -25,11 +31,11 @@ export default function CandidateCard() {
               May 1994 - Feb 2018 (23 years, 10 months)
             </Text>
           </Stack>
-          <Stack flex direction="column">
+          <Stack direction="column">
             <Text variant="body2" spaceAfter="tiny">
               Prozone Sports LTD
             </Text>
-            <Stack flex align="center" spacingChildren="tiny">
+            <Stack align="center" spacingChildren="tiny">
               <Icon icon="clock" color="light" />
               <Text variant="body2" color="subtitle">
                 Last visited 21/05/2019

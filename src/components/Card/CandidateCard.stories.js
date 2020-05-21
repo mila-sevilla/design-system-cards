@@ -1,6 +1,6 @@
 import React from 'react';
 import CandidateCard from './CandidateCard';
-import Stack from '../Stack';
+import Grid from '../Grid';
 
 export default {
   title: 'CandidateCard',
@@ -8,10 +8,12 @@ export default {
 };
 
 export const All = () => (
-  <Stack spacingChildren="medium" flex align="center">
+  <Grid spacing="medium" tablet={{ columns: '1fr 1fr' }} desktop={{ columns: '1fr 1fr 1fr' }}>
     <CandidateCard />
     <CandidateCard />
     <CandidateCard />
     <CandidateCard />
-  </Stack>
+    <CandidateCard />
+    <CandidateCard />
+  </Grid>
 );

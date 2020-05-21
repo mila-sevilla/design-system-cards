@@ -22,20 +22,15 @@ const getJustifyToken = ({ justify }) => {
   return justifyToken[justify];
 };
 
-const getSpacingToken = ({ theme, spaceAfter }) => {
-  return spaceAfter && spaceDict(theme)[spaceAfter];
-};
+const getSpacingToken = ({ theme, spaceAfter }) => spaceAfter && spaceDict(theme)[spaceAfter];
 
-const getPaddingToken = ({ theme, padding }) => {
-  return padding && spaceDict(theme)[padding];
-};
+const getPaddingToken = ({ theme, padding }) => padding && spaceDict(theme)[padding];
 
-const getSpacingChildrenToken = ({ theme, spacingChildren }) => {
-  return spacingChildren && spaceDict(theme)[spacingChildren];
-};
+const getSpacingChildrenToken = ({ theme, spacingChildren }) =>
+  spacingChildren && spaceDict(theme)[spacingChildren];
 
 const StyledStack = styled.div`
-  display: ${props => (props.flex ? 'flex' : 'block')};
+  display: ${props => (props.block ? 'block' : 'flex')};
   flex-wrap: ${props => (props.noWrap ? 'no-wrap' : 'wrap')};
   flex-direction: ${props => props.direction};
   align-items: ${getAlignToken};
@@ -48,13 +43,49 @@ const StyledStack = styled.div`
         ? `0 0 0 ${getSpacingChildrenToken(props)}`
         : `${getSpacingChildrenToken(props)} 0 0 0`};
   }
+  ${props => {
+    if (props.tablet) {
+      return ` 
+        @media (min-width: 560px) {
+          flex-direction: ${props.tablet.direction && props.tablet.direction};;
+          & > * + * {
+            margin: ${
+              props.tablet.direction === 'row'
+                ? `0 0 0 ${getSpacingChildrenToken(props)}`
+                : `${getSpacingChildrenToken(props)} 0 0 0`
+            };
+          };
+        }
+      `;
+    }
+    return ``;
+  }}
+  ${props => {
+    if (props.desktop) {
+      return ` 
+        @media (min-width: 765px) {
+          flex-direction: ${props.desktop.direction && props.desktop.direction};;
+          & > * + * {
+            margin: ${
+              props.desktop.direction === 'row'
+                ? `0 0 0 ${getSpacingChildrenToken(props)}`
+                : `${getSpacingChildrenToken(props)} 0 0 0`
+            };
+          };
+        }
+      `;
+    }
+    return ``;
+  }}
 `;
 
 export default function Stack({
   children,
-  flex,
+  block,
   align = 'start',
   direction = 'row',
+  tablet,
+  desktop,
   justify = 'start',
   spaceAfter,
   spacingChildren,
@@ -63,8 +94,10 @@ export default function Stack({
 }) {
   return (
     <StyledStack
-      flex={flex}
+      block={block}
       align={align}
+      tablet={tablet}
+      desktop={desktop}
       direction={direction}
       justify={justify}
       spacingChildren={spacingChildren}

@@ -62,6 +62,12 @@ const theme = {
     borderRadiusLarge: '12px',
     circle: '50%',
   },
+  breakpoints: {
+    mobileLarge: '425px',
+    tablet: '768px',
+    desktop: '1024px',
+    desktopLarge: '1960px',
+  },
 };
 
 export default theme;
