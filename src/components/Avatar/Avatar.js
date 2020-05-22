@@ -1,11 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const getSizeToken = ({ size }) => {
+const getSizeToken = ({ theme, size }) => {
   const sizeToken = {
-    large: '64px',
-    medium: '56px',
-    small: '48px',
+    large: theme.avatar.large,
+    medium: theme.avatar.medium,
+    small: theme.avatar.small,
   };
   return sizeToken[size];
 };

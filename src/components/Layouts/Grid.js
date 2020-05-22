@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import spaceDict from '../common/spaceDict';
+import getSpacingToken from '../common/getSpacingToken';
 
-const getSpacingToken = ({ theme, spacing }) => spacing && spaceDict(theme)[spacing];
+const getGapToken = ({ theme, gap }) => gap && getSpacingToken(theme)[gap];
 
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: ${props => props.columns};
-  column-gap: ${getSpacingToken};
-  row-gap: ${getSpacingToken};
+  column-gap: ${getGapToken};
+  row-gap: ${getGapToken};
   ${props => {
     if (props.tablet) {
       return ` 
@@ -31,9 +31,9 @@ const StyledGrid = styled.div`
   }}
 `;
 
-export default function Grid({ children, spacing, tablet, desktop, columns = '1fr' }) {
+export default function Grid({ children, gap, tablet, desktop, columns = '1fr' }) {
   return (
-    <StyledGrid spacing={spacing} tablet={tablet} desktop={desktop} columns={columns}>
+    <StyledGrid gap={gap} tablet={tablet} desktop={desktop} columns={columns}>
       {children}
     </StyledGrid>
   );

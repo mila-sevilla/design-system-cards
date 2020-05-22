@@ -1,41 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
-import spaceDict from '../common/spaceDict';
+import getSpacingToken from '../common/getSpacingToken';
 
-const getAlignToken = ({ align }) => {
-  const alignToken = {
+const getAlignValue = ({ align }) => {
+  const alignValues = {
     start: 'flex-start',
     center: 'center',
     end: 'flex-end',
   };
-  return alignToken[align];
+  return alignValues[align];
 };
 
-const getJustifyToken = ({ justify }) => {
-  const justifyToken = {
+const getJustifyValue = ({ justify }) => {
+  const justifyValues = {
     start: 'flex-start',
     center: 'center',
     end: 'flex-end',
     between: 'space-between',
     around: 'space-around',
   };
-  return justifyToken[justify];
+  return justifyValues[justify];
 };
 
-const getSpacingToken = ({ theme, spaceAfter }) => spaceAfter && spaceDict(theme)[spaceAfter];
+const getSpaceAfterToken = ({ theme, spaceAfter }) =>
+  spaceAfter && getSpacingToken(theme)[spaceAfter];
 
-const getPaddingToken = ({ theme, padding }) => padding && spaceDict(theme)[padding];
+const getPaddingToken = ({ theme, padding }) => padding && getSpacingToken(theme)[padding];
 
 const getSpacingChildrenToken = ({ theme, spacingChildren }) =>
-  spacingChildren && spaceDict(theme)[spacingChildren];
+  spacingChildren && getSpacingToken(theme)[spacingChildren];
 
 const StyledStack = styled.div`
   display: ${props => (props.block ? 'block' : 'flex')};
   flex-wrap: ${props => (props.noWrap ? 'no-wrap' : 'wrap')};
   flex-direction: ${props => props.direction};
-  align-items: ${getAlignToken};
-  justify-content: ${getJustifyToken};
-  margin-bottom: ${getSpacingToken};
+  align-items: ${getAlignValue};
+  justify-content: ${getJustifyValue};
+  margin-bottom: ${getSpaceAfterToken};
   padding: ${getPaddingToken};
   & > * + * {
     margin: ${props =>
@@ -44,38 +45,36 @@ const StyledStack = styled.div`
         : `${getSpacingChildrenToken(props)} 0 0 0`};
   }
   ${props => {
-    if (props.tablet) {
-      return ` 
-        @media (min-width: 560px) {
-          flex-direction: ${props.tablet.direction && props.tablet.direction};;
-          & > * + * {
-            margin: ${
-              props.tablet.direction === 'row'
-                ? `0 0 0 ${getSpacingChildrenToken(props)}`
-                : `${getSpacingChildrenToken(props)} 0 0 0`
-            };
+    if (!props.tablet) return '';
+
+    return ` 
+      @media (min-width: 560px) {
+        flex-direction: ${props.tablet.direction && props.tablet.direction};;
+        & > * + * {
+          margin: ${
+            props.tablet.direction === 'row'
+              ? `0 0 0 ${getSpacingChildrenToken(props)}`
+              : `${getSpacingChildrenToken(props)} 0 0 0`
           };
-        }
-      `;
-    }
-    return ``;
+        };
+      }
+    `;
   }}
   ${props => {
-    if (props.desktop) {
-      return ` 
-        @media (min-width: 765px) {
-          flex-direction: ${props.desktop.direction && props.desktop.direction};;
-          & > * + * {
-            margin: ${
-              props.desktop.direction === 'row'
-                ? `0 0 0 ${getSpacingChildrenToken(props)}`
-                : `${getSpacingChildrenToken(props)} 0 0 0`
-            };
+    if (!props.desktop) return '';
+
+    return ` 
+      @media (min-width: 765px) {
+        flex-direction: ${props.desktop.direction && props.desktop.direction};;
+        & > * + * {
+          margin: ${
+            props.desktop.direction === 'row'
+              ? `0 0 0 ${getSpacingChildrenToken(props)}`
+              : `${getSpacingChildrenToken(props)} 0 0 0`
           };
-        }
-      `;
-    }
-    return ``;
+        };
+      }
+    `;
   }}
 `;
 

@@ -9,9 +9,9 @@ export default {
 };
 
 export const All = () => (
-  <Grid spacing="medium" tablet={{ columns: '1fr 1fr' }} desktop={{ columns: '1fr 1fr 1fr' }}>
+  <Grid gap="medium" tablet={{ columns: '1fr 1fr' }} desktop={{ columns: '1fr 1fr 1fr' }}>
     {Candidates.map((candidate, index) => (
-      <CandidateCard candidateId={index} />
+      <CandidateCard candidateId={index} key={candidate.id} />
     ))}
   </Grid>
 );

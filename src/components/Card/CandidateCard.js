@@ -30,7 +30,7 @@ export default function CandidateCard({ candidateId = 0 }) {
               {candidate.job1.title}
             </Text>
             <Text variant="body2" color="subtitle">
-              {candidate.job1.start}-{candidate.job1.end}
+              {`${candidate.job1.start} - ${candidate.job1.end}`}
             </Text>
           </Stack>
           <Stack direction="column">
@@ -40,7 +40,7 @@ export default function CandidateCard({ candidateId = 0 }) {
             <Stack align="center" spacingChildren="tiny">
               <Icon icon="clock" color="light" />
               <Text variant="body2" color="subtitle">
-                Last visited {candidate.lastVisited}
+                {`Last visited ${candidate.lastVisited}`}
               </Text>
             </Stack>
           </Stack>

@@ -68,6 +68,16 @@ const theme = {
     desktop: '1024px',
     desktopLarge: '1960px',
   },
+  avatar: {
+    small: '48px',
+    medium: '56px',
+    large: '64px',
+  },
+  icon: {
+    small: '12px',
+    medium: '16px',
+    large: '24px',
+  },
 };
 
 export default theme;

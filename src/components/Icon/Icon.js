@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Icons from '../../icons';
 
-const getSizeToken = ({ size }) => {
+const getSizeToken = ({ theme, size }) => {
   const sizeToken = {
-    large: '24px',
-    medium: '16px',
-    small: '12px',
+    large: theme.icon.large,
+    medium: theme.icon.medium,
+    small: theme.icon.small,
   };
   return sizeToken[size];
 };
