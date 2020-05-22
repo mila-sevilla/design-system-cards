@@ -41,7 +41,7 @@ const getSpaceAfterToken = ({ theme, spaceAfter }) =>
 const getSpaceBeforeToken = ({ theme, spaceBefore }) =>
   spaceBefore && getSpacingToken(theme)[spaceBefore];
 
-export const StyledText = styled(({ element: TextElement, children, className }) => (
+const StyledText = styled(({ element: TextElement, children, className }) => (
   <TextElement className={className}>{children}</TextElement>
 ))`
   font-family: ${({ theme }) => theme.typography.fontFamily};
@@ -54,7 +54,7 @@ export const StyledText = styled(({ element: TextElement, children, className })
   text-align: ${props => (props.align ? props.align : 'left')};
 `;
 
-const Text = ({
+export default function Text({
   element = 'p',
   variant = 'body1',
   color = 'default',
@@ -62,7 +62,7 @@ const Text = ({
   spaceBefore = 'none',
   align,
   children,
-}) => {
+}) {
   return (
     <StyledText
       element={element}
@@ -75,6 +75,4 @@ const Text = ({
       {children}
     </StyledText>
   );
-};
-
-export default Text;
+}

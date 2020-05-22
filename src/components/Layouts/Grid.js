@@ -10,24 +10,20 @@ const StyledGrid = styled.div`
   column-gap: ${getGapToken};
   row-gap: ${getGapToken};
   ${props => {
-    if (props.tablet) {
-      return ` 
+    if (!props.tablet) return '';
+    return ` 
       @media (min-width: ${props.theme.breakpoints.tablet}) {
         grid-template-columns: ${props.tablet.columns};
       }
       `;
-    }
-    return ``;
   }}
   ${props => {
-    if (props.desktop) {
-      return ` 
+    if (!props.desktop) return '';
+    return ` 
       @media (min-width: ${props.theme.breakpoints.desktop}) {
         grid-template-columns: ${props.desktop.columns};
       }
       `;
-    }
-    return ``;
   }}
 `;
 

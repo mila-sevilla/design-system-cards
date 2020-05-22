@@ -41,7 +41,7 @@ const StyledIcon = styled(({ className, viewBox, icon, ariaHidden, ariaLabel }) 
   color: ${getColorToken};
 `;
 
-const Icon = ({
+export default function Icon({
   size = 'medium',
   color = 'inherit',
   className,
@@ -49,7 +49,7 @@ const Icon = ({
   viewBox = '0 0 16 16',
   ariaHidden,
   ariaLabel,
-}) => {
+}) {
   return (
     <StyledIcon
       viewBox={viewBox}
@@ -61,6 +61,4 @@ const Icon = ({
       icon={Icons[icon]}
     />
   );
-};
-
-export default Icon;
+}

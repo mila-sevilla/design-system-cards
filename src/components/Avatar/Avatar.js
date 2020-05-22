@@ -24,8 +24,6 @@ const StyledAvatar = styled.div(
   `
 );
 
-const Avatar = ({ src, size = 'medium' }) => {
+export default function Avatar({ src, size = 'medium' }) {
   return <StyledAvatar size={size}>{src && <img src={src} alt="avatar" />}</StyledAvatar>;
-};
-
-export default Avatar;
+}
