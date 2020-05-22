@@ -17,10 +17,9 @@ const StyledButton = styled.button(
     }
     &:hover {
       cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-      box-shadow: ${props => !props.disabled && theme.shadows.medium};
       background: ${props =>
         !props.disabled &&
-        `${theme.palette.primary} radial-gradient(circle, transparent 1%, ${theme.palette.primary} 1%) center/15000%`};
+        `${theme.palette.primaryDark} radial-gradient(circle, transparent 1%, ${theme.palette.primaryDark} 1%) center/15000%`};
     }
     &:active {
       background-color: ${theme.palette.primaryLight};
