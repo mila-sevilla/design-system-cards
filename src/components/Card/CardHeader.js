@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Stack from '../Stack';
-import IconButton from '../IconButton';
+import Stack from '../Layouts/Stack';
+import IconButton from '../Button/IconButton';
 
 const StyledCardHeader = styled.div(
   ({ theme }) => css`

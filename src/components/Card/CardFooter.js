@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Badge from '../Badge';
-import Button from '../Button';
+import Badge from '../Badge/Badge';
+import Button from '../Button/Button';
 
 const StyledCardFooter = styled.div(
   ({ theme }) => css`

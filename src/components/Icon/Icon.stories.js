@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
-import Text from './Text';
-import Stack from './Stack';
+import Text from '../Text/Text';
+import Stack from '../Layouts/Stack';
 
 export default {
   title: 'Icons',

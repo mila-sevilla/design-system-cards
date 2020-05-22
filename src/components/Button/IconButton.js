@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Icon from './Icon';
+import Icon from '../Icon/Icon';
 
 const StyledIconButton = styled.button(
   ({ theme }) => css`
@@ -22,7 +22,6 @@ export default function IconButton({
   color = 'inherit',
   className,
   viewBox = '0 0 16 16',
-  ariaHidden,
   ariaLabel,
 }) {
   return (
@@ -33,7 +32,6 @@ export default function IconButton({
         size={size}
         className={className}
         color={color}
-        ariaHidden={ariaHidden}
         ariaLabel={ariaLabel}
       />
     </StyledIconButton>

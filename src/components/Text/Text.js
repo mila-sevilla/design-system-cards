@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import spaceDict from './common/spaceDict';
+import spaceDict from '../common/spaceDict';
 
 const getColorToken = ({ theme, color }) => {
   const colorToken = {

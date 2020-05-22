@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from './Avatar';
-import Stack from './Stack';
+import Stack from '../Layouts/Stack';
 
 export default {
   title: 'Avatar',
