@@ -12,6 +12,10 @@ const StyledIconButton = styled.button(
       cursor: pointer;
       background-color: ${theme.palette.grey50};
     }
+    &:focus {
+      outline: none;
+      background-color: ${theme.palette.grey50};
+    }
   `
 );
 

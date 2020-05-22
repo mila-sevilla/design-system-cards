@@ -13,6 +13,7 @@ const StyledButton = styled.button(
     transition: box-shadow 0.3s ease, background 0.8s;
     &:focus {
       outline: none;
+      background-color: ${theme.palette.primaryLight};
     }
     &:hover {
       cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
