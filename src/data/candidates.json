@@ -3,144 +3,162 @@
     "id": 1,
     "name": "Henry Worsnup",
     "avatar": "https://randomuser.me/api/portraits/men/49.jpg",
-    "job1": {
-      "title": "Statistician",
-      "start": "9/2/2002",
-      "end": "7/7/2010"
-    },
-    "job2": {
-      "title": "Payment Adjustment Coordinator",
-      "start": "19/6/2016",
-      "end": "21/3/2019"
-    },
+    "jobs": [
+      {
+        "title": "Statistician",
+        "start": "9/2/2002",
+        "end": "7/7/2010"
+      },
+      {
+        "title": "Payment Adjustment Coordinator",
+        "start": "19/6/2016",
+        "end": "21/3/2019"
+      }
+    ],
     "lastVisited": "20/5/2020"
   },
   {
     "id": 2,
     "name": "Max Skule",
     "avatar": "https://randomuser.me/api/portraits/men/44.jpg",
-    "job1": {
-      "title": "Speech Pathologist",
-      "start": "4/3/2003",
-      "end": "11/6/2012"
-    },
-    "job2": {
-      "title": "Health Coach",
-      "start": "6/9/2015",
-      "end": "13/5/2019"
-    },
+    "jobs": [
+      {
+        "title": "Speech Pathologist",
+        "start": "4/3/2003",
+        "end": "11/6/2012"
+      },
+      {
+        "title": "Health Coach",
+        "start": "6/9/2015",
+        "end": "13/5/2019"
+      }
+    ],
     "lastVisited": "18/5/2020"
   },
   {
     "id": 3,
     "name": "Boris Fetherston",
     "avatar": "https://randomuser.me/api/portraits/men/52.jpg",
-    "job1": {
-      "title": "Civil Engineer",
-      "start": "13/9/2004",
-      "end": "14/8/2012"
-    },
-    "job2": {
-      "title": "Tax Accountant",
-      "start": "16/5/2015",
-      "end": "23/9/2018"
-    },
+    "jobs": [
+      {
+        "title": "Civil Engineer",
+        "start": "13/9/2004",
+        "end": "14/8/2012"
+      },
+      {
+        "title": "Tax Accountant",
+        "start": "16/5/2015",
+        "end": "23/9/2018"
+      }
+    ],
     "lastVisited": "20/2/2020"
   },
   {
     "id": 4,
     "name": "Giovanni Glackin",
     "avatar": "https://randomuser.me/api/portraits/men/51.jpg",
-    "job1": {
-      "title": "Business Systems Development Analyst",
-      "start": "27/8/2004",
-      "end": "28/6/2012"
-    },
-    "job2": {
-      "title": "Web Designer",
-      "start": "15/9/2016",
-      "end": "5/3/2019"
-    },
+    "jobs": [
+      {
+        "title": "Business Systems Development Analyst",
+        "start": "27/8/2004",
+        "end": "28/6/2012"
+      },
+      {
+        "title": "Web Designer",
+        "start": "15/9/2016",
+        "end": "5/3/2019"
+      }
+    ],
     "lastVisited": "10/4/2020"
   },
   {
     "id": 5,
     "name": "Ellen Quarrie",
     "avatar": "https://randomuser.me/api/portraits/women/59.jpg",
-    "job1": {
-      "title": "Sales Representative",
-      "start": "31/1/2001",
-      "end": "1/1/2011"
-    },
-    "job2": {
-      "title": "Financial Advisor",
-      "start": "4/10/2015",
-      "end": "29/10/2019"
-    },
+    "jobs": [
+      {
+        "title": "Sales Representative",
+        "start": "31/1/2001",
+        "end": "1/1/2011"
+      },
+      {
+        "title": "Financial Advisor",
+        "start": "4/10/2015",
+        "end": "29/10/2019"
+      }
+    ],
     "lastVisited": "11/7/2020"
   },
   {
     "id": 6,
     "name": "Heather Vinall",
     "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
-    "job1": {
-      "title": "Office Assistant",
-      "start": "5/9/2006",
-      "end": "2/11/2010"
-    },
-    "job2": {
-      "title": "GIS Technical Architect",
-      "start": "26/5/2015",
-      "end": "7/3/2019"
-    },
+    "jobs": [
+      {
+        "title": "Office Assistant",
+        "start": "5/9/2006",
+        "end": "2/11/2010"
+      },
+      {
+        "title": "GIS Technical Architect",
+        "start": "26/5/2015",
+        "end": "7/3/2019"
+      }
+    ],
     "lastVisited": "10/5/2019"
   },
   {
     "id": 7,
     "name": "Addie Shillabeer",
     "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
-    "job1": {
-      "title": "Desktop Support Technician",
-      "start": "20/8/2001",
-      "end": "6/8/2011"
-    },
-    "job2": {
-      "title": "Nurse",
-      "start": "4/5/2014",
-      "end": "31/7/2019"
-    },
+    "jobs": [
+      {
+        "title": "Desktop Support Technician",
+        "start": "20/8/2001",
+        "end": "6/8/2011"
+      },
+      {
+        "title": "Nurse",
+        "start": "4/5/2014",
+        "end": "31/7/2019"
+      }
+    ],
     "lastVisited": "9/2/2020"
   },
   {
     "id": 8,
     "name": "Mave Cail",
     "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
-    "job1": {
-      "title": "Technical Writer",
-      "start": "17/12/2002",
-      "end": "17/11/2011"
-    },
-    "job2": {
-      "title": "Nurse",
-      "start": "28/6/2014",
-      "end": "24/11/2018"
-    },
+    "jobs": [
+      {
+        "title": "Technical Writer",
+        "start": "17/12/2002",
+        "end": "17/11/2011"
+      },
+      {
+        "title": "Nurse",
+        "start": "28/6/2014",
+        "end": "24/11/2018"
+      }
+    ],
     "lastVisited": "15/5/2020"
   },
   {
     "id": 9,
     "name": "Roxan Scriven",
     "avatar": "https://randomuser.me/api/portraits/women/62.jpg",
-    "job1": {
-      "title": "Assistant Manager",
-      "start": "23/9/2004",
-      "end": "2/2/2013"
-    },
-    "job2": {
-      "title": "GIS Technical Architect",
-      "start": "14/4/2015",
-      "end": "19/4/2019"
-    },
+    "jobs": [
+      {
+        "title": "Assistant Manager",
+        "start": "23/9/2004",
+        "end": "2/2/2013"
+      },
+      {
+        "title": "GIS Technical Architect",
+        "start": "14/4/2015",
+        "end": "19/4/2019"
+      }
+    ],
     "lastVisited": "22/5/2020"
   }
 ]

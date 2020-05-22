@@ -10,8 +10,14 @@ export default {
 
 export const All = () => (
   <Grid gap="medium" tablet={{ columns: '1fr 1fr' }} desktop={{ columns: '1fr 1fr 1fr' }}>
-    {Candidates.map((candidate, index) => (
-      <CandidateCard candidateId={index} key={candidate.id} />
+    {Candidates.map(candidate => (
+      <CandidateCard
+        avatar={candidate.avatar}
+        name={candidate.name}
+        jobs={candidate.jobs}
+        lastVisited={candidate.lastVisited}
+        key={candidate.id}
+      />
     ))}
   </Grid>
 );
