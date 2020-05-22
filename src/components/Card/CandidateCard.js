@@ -1,13 +1,15 @@
 import React from 'react';
 import Card from './Card';
-import Avatar from '../Avatar';
-import Stack from '../Stack';
-import Text from '../Text';
-import Icon from '../Icon';
+import Avatar from '../Avatar/Avatar';
+import Stack from '../Layouts/Stack';
+import Text from '../Text/Text';
+import Icon from '../Icon/Icon';
 import CardHeader from './CardHeader';
 import CardFooter from './CardFooter';
+import Candidates from '../../data/candidates.json';
 
-export default function CandidateCard() {
+export default function CandidateCard({ candidateId = 0 }) {
+  const candidate = Candidates[candidateId];
   return (
     <Card>
       <CardHeader />
@@ -18,27 +20,27 @@ export default function CandidateCard() {
         desktop={{ direction: 'column' }}
         tablet={{ direction: 'row' }}
       >
-        <Avatar size="small" />
+        <Avatar size="small" src={candidate.avatar} />
         <Stack direction="column" spacingChildren="small">
           <Text variant="h3" color="highlighted">
-            Ennie Deininger
+            {candidate.name}
           </Text>
           <Stack direction="column">
             <Text variant="body2" spaceAfter="tiny">
-              Business Manager for Poland, Czech Republic and Slovakia
+              {candidate.job1.title}
             </Text>
             <Text variant="body2" color="subtitle">
-              May 1994 - Feb 2018 (23 years, 10 months)
+              {candidate.job1.start}-{candidate.job1.end}
             </Text>
           </Stack>
           <Stack direction="column">
             <Text variant="body2" spaceAfter="tiny">
-              Prozone Sports LTD
+              {candidate.job2.title}
             </Text>
             <Stack align="center" spacingChildren="tiny">
               <Icon icon="clock" color="light" />
               <Text variant="body2" color="subtitle">
-                Last visited 21/05/2019
+                Last visited {candidate.lastVisited}
               </Text>
             </Stack>
           </Stack>

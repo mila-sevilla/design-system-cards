@@ -1,6 +1,7 @@
 import React from 'react';
 import CandidateCard from './CandidateCard';
-import Grid from '../Grid';
+import Grid from '../Layouts/Grid';
+import Candidates from '../../data/candidates.json';
 
 export default {
   title: 'CandidateCard',
@@ -9,11 +10,8 @@ export default {
 
 export const All = () => (
   <Grid spacing="medium" tablet={{ columns: '1fr 1fr' }} desktop={{ columns: '1fr 1fr 1fr' }}>
-    <CandidateCard />
-    <CandidateCard />
-    <CandidateCard />
-    <CandidateCard />
-    <CandidateCard />
-    <CandidateCard />
+    {Candidates.map((candidate, index) => (
+      <CandidateCard candidateId={index} />
+    ))}
   </Grid>
 );
