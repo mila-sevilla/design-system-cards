@@ -46,7 +46,6 @@ const StyledStack = styled.div`
   }
   ${props => {
     if (!props.tablet) return '';
-
     return ` 
       @media (min-width: 560px) {
         flex-direction: ${props.tablet.direction && props.tablet.direction};;
@@ -62,7 +61,6 @@ const StyledStack = styled.div`
   }}
   ${props => {
     if (!props.desktop) return '';
-
     return ` 
       @media (min-width: 765px) {
         flex-direction: ${props.desktop.direction && props.desktop.direction};;

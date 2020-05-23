@@ -8,9 +8,10 @@ const StyledButton = styled.button(
     padding: ${`${theme.spacing.xs} ${theme.spacing.sm}`};
     color: ${theme.palette.grey50};
     background-color: ${props => (props.disabled ? theme.palette.grey200 : theme.palette.primary)};
-    border: ${props => !props.disabled && `1px solid ${theme.palette.primary}`};
+    border: ${props =>
+      props.disabled ? `1px solid ${theme.palette.grey200}` : `1px solid ${theme.palette.primary}`};
     border-radius: ${theme.shape.borderRadius};
-    transition: box-shadow 0.3s ease, background 0.8s;
+    transition: background 0.8s;
     &:focus {
       outline: none;
       background-color: ${theme.palette.primaryLight};
