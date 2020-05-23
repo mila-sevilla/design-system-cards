@@ -16,7 +16,7 @@ export const Primary = () => (
 );
 
 export const IconButtons = () => (
-  <Stack spacingChildren="tiny">
+  <Stack spacingChildren="tiny" align="center">
     <IconButton icon="star" color="dark" />
     <IconButton icon="mail" color="dark" />
     <IconButton icon="clock" color="dark" />

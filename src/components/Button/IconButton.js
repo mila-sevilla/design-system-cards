@@ -8,6 +8,7 @@ const StyledIconButton = styled.button(
     border-radius: ${theme.shape.circle};
     border: 0px;
     transition: background 0.3s ease;
+    background-color: transparent;
     &:hover {
       cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
       background-color: ${theme.palette.grey50};
